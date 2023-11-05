@@ -1,7 +1,7 @@
 const express = require("express");
-const session = require("express-session");
-const bodyParser = require("body-parser");
-const FileStore = require("session-file-store")(session);
+const session = require("express-session"); //session 사용을 위해 사용
+const bodyParser = require("body-parser"); //클라이언트 POST request data의 body로부터 파라미터를 편리하게 추출합니다.
+const FileStore = require("session-file-store")(session); //session 파일 스토어를 위해 사용
 
 var authRouter = require("./lib_login/auth.js");
 var authCheck = require("./lib_login/authCheck.js");
